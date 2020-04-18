@@ -17,6 +17,8 @@ public class Student {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "path")
+    private String path;
 
     @ManyToMany
     @JoinTable(
@@ -49,6 +51,14 @@ public class Student {
 
     public void setCourses(List<Course> courses) {
         this.courses = courses;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     public Student() {

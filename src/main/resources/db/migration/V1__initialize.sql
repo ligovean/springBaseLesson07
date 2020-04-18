@@ -58,9 +58,15 @@ DROP TABLE IF EXISTS students;
 CREATE TABLE students (
 	id int(11) NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) DEFAULT NULL,
+    path VARCHAR(500) DEFAULT NULL,
     PRIMARY KEY(id)
 ) ENGINE=InnoDB CHARSET=utf8;
 
+INSERT INTO students (name, path)
+VALUES
+('Ann', '/app/img/1.jpg'),
+('Diego', '/app/img/2.jpg'),
+('Nathalie', '/app/img/3.jpg');
 
 DROP TABLE IF EXISTS courses;
 
